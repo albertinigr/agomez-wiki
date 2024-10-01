@@ -1,0 +1,39 @@
+name: wikistack
+
+services:
+  backend:
+    env_file:
+      - ./agomez-wiki-prox/.env
+    build:
+      context: ./agomez-wiki-prox
+      dockerfile: Dockerfile
+    volumes:
+      - ./agomez-wiki-prox:/app
+    ports:
+      - "3000:3000"
+      - "8001:8001"
+    environment:
+      - NODE_ENV=production
+      - TRANSLATION_SERVICE_URL=http://host.docker.internal:5000
+    networks:
+      - wikistack
+  frontend:
+    env_file:
+      - ./agomez-wiki-front/.env
+    build:
+      context: ./agomez-wiki-front
+      dockerfile: Dockerfile
+    volumes:
+      - ./agomez-wiki-front:/app
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - backend
+    networks:
+      - wikistack
+
+networks:
+  wikistack:
+    driver: bridge
