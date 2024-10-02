@@ -28,3 +28,18 @@ Project is composed of three pieces:
    ```
 
 3. After build id done, the app will be available at por 5173. Backend will be available through port 3000, if opened, a swagger view will be display, where tests can be applied over the backend endpoint. Finally, in port 8001, there is an admin to explore logs inside of backend and stored in sqlite store.
+
+## Other steps
+
+### Testing
+
+```
+cd agomez-wiki-prox
+npm run test
+```
+
+### Coverage
+
+```
+npm run test:cov
+```
