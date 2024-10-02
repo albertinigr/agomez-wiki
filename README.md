@@ -1,6 +1,14 @@
 # Wiki Proxy
 
-Project is composed of three pieces:
+## Project overview
+
+This project has the goal to fetch data from wikipedia featured content and show it by date and language. For that the user can choose his preferred language and click search, it will show the most read articles in the day selected. Notice that everytime the user choose a language, the most read articles vary, i.e, English most read articles will be different from Russian most read articles. But if the user wants the content of english locale but in a different language, he can select a new language inside the search bar, it will search the english most read articles and translate the title and extract to the selected language, disrigarding the original user language.
+
+## Notes
+
+Tech stack: NestJS, React, Typescript, Jest, Docker, Docker compose, sqlite3, nginx, eslint, vite, Material UI (MUI) for react, axios, swagger, rxjs,
+
+Project is composed of three parts:
 
 1. docker compose file at the root,
    https://github.com/albertinigr/agomez-wiki
