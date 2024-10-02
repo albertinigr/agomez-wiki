@@ -39,12 +39,37 @@ Project is composed of three parts:
 
 ## Other steps
 
+### IOS
+
+The project can be run in ios devices. Must install xcode and a ios simulator first, then run the following command:
+
+```
+npx cap run ios
+```
+
+### Andriod
+
+The project also run on android, must have a simulator, android studio and sdk. Then run the following code:
+
+```
+npx cap run android
+```
+
 ### Testing
 
 ```
 cd agomez-wiki-prox
 npm run test
 ```
+
+### Logs
+
+Open localhost:8001, create an account.
+Logs (intercepts requests an logs them, also logs errors, and unexpected exceptions)
+
+### Swagger
+
+Devs can inspect endpoints, by using swagger tool. Open localhost:3000, the root path points to swagger documentation. From there, every endpoint can be reviewed and tested with sample data.
 
 ### Coverage
 
