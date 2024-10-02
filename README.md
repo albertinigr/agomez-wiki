@@ -17,6 +17,8 @@ Project is composed of three parts:
 3. frontend (agomez-wiki-front)
    https://github.com/albertinigr/agomez-wiki-front
 
+Note: use branch "main"
+
 ## Setup
 
 1. Edit the docker-compose.yaml
